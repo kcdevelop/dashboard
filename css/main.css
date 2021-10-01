@@ -16,7 +16,7 @@ article {
 header,
 .project,
 #dashboard {
-	width: 100vw;
+	width: 100%;
 }
 header .left,
 header .right,
