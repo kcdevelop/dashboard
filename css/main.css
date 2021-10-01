@@ -1,0 +1,151 @@
+html, body, h1, h2, h3, h4, h5, 
+header, section, article, aside,
+div, p, ul, ol, li, a, footer, video,
+blockquote fieldset, form, 
+input, select, textarea, span {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+header,
+article {
+	flex-direction: row;
+	align-items: center;
+	display: flex;
+}
+header,
+.project,
+#dashboard {
+	width: 100vw;
+}
+header .left,
+header .right,
+.project .title,
+.project .go-arrow {
+	width: 50%;
+}
+header .right,
+.project .go-arrow {
+	text-align: right;
+}
+header {
+	background: linear-gradient(90deg, #8cd7f9, #5ca3d8);
+}
+header .left,
+header .right {
+	font-family: 'Orbitron';
+	letter-spacing: .05em;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: white;
+	width: 50%;
+}
+header .left {
+	padding-left: 15px;
+	font-weight: bold;
+	font-size: 2.5vmax;
+	text-align: left;
+}
+header .right {
+	padding-right: 11px;
+	font-size: 2vmax;
+}
+#dashboard {
+	padding: 15px;
+}
+#dashboard a {
+	text-decoration: none;
+}
+.project {
+	box-shadow: 2px 1px 8px -4px#323232;
+	padding: 15px 15px 15px 8px;
+	margin: 0 auto 15px;
+	border-radius: 5px;
+	width: 100%;
+}
+.project.ws,
+.project.em {
+	transition: border-left .4s linear;
+}
+.project.ws {
+	border-left: solid 5px rgba(140, 215, 249, .55);
+}
+.project.em {
+	border-left: solid 5px rgba(41, 140, 215, .55);
+}
+.project.ws:hover {
+	border-left: solid 5px rgb(121, 211, 253, 1);
+}
+.project.em:hover {
+	border-left: solid 5px rgb(41, 140, 215, 1);
+}
+.project.ws .go-arrow,
+.project.em .go-arrow {
+	transition: color .4s linear;
+}
+.project.ws:hover .go-arrow {
+	color: rgb(121, 211, 253, 1);
+}
+.project.em:hover .go-arrow {
+	color: rgb(41, 140, 215, 1);
+}
+.project .title,
+.project .go-arrow {
+	font-family: 'Assistant';
+}
+.project .go-arrow,
+.project .title span {
+	color: #000;
+}
+.project .title span,
+.project .title small {
+	display: block;
+}
+.project .title {
+	width: 70%;
+}
+.project .title span {
+	margin-bottom: 2px;
+	letter-spacing: .025em;
+	font-weight: 700;
+	font-size: 18px;
+}
+.project .title small {
+	font-size: 15px;
+	font-weight: 500;
+	color: #727272;
+}
+.project .go-arrow {
+	font-weight: bolder;
+	font-size: 30px;
+	width: 30%;
+}
+.mobile-show {
+	display: none;
+}
+@media screen and (max-width: 585px) {
+	header {
+		flex-direction: column;
+	}
+	header .left,
+	header .right {
+		text-align: center;
+		width: 100%;
+	}
+	header .left {
+		padding-top: 9px;
+		padding-bottom: 3px;
+	}
+	header .right {
+		padding-top: 2px;
+		padding-bottom: 12px;
+	}
+	.mobile-show {
+		display: inline;
+	}
+}
+@media screen and (max-width: 435px) {
+	.mobile-show {
+		display: inline;
+	}
+}
