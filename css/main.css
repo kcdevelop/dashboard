@@ -4,63 +4,94 @@ div, p, ul, ol, li, a, footer, video,
 blockquote fieldset, form, 
 input, select, textarea, span {
 	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
-header,
-article {
-	flex-direction: row;
-	align-items: center;
+article,
+header {
 	display: flex;
 }
 header,
 .project,
-#dashboard {
+.dashboard,
+header .content,
+header .developer-website {
 	width: 100%;
 }
-header .left,
-header .right,
 .project .title,
 .project .go-arrow {
 	width: 50%;
 }
-header .right,
+.email-section,
+.website-section,
+header .developer-website {
+	font-family: 'Orbitron';
+}
 .project .go-arrow {
 	text-align: right;
 }
 header {
-	background: linear-gradient(90deg, #8cd7f9, #5ca3d8);
+	flex-direction: column;
+	padding: 8px 15px 18px;
 }
-header .left,
-header .right {
-	font-family: 'Orbitron';
-	letter-spacing: .05em;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	color: white;
-	width: 50%;
+header .developer-website:first-child .website,
+header .developer-website:first-child .developer {
+	-webkit-transform: translateY(15%);
+	-moz-transform: translateY(15%);
+	transform: translateY(16%);
 }
-header .left {
-	padding-left: 15px;
+header .developer-website:first-child {
+	border-bottom: solid 4px#79d3fd;
+}
+header .website,
+header .developer {
+	font-size: 1.8em;
 	font-weight: bold;
-	font-size: 2.5vmax;
-	text-align: left;
+	color: #000;
 }
-header .right {
-	padding-right: 11px;
-	font-size: 2vmax;
+header .developer-website {
+	letter-spacing: .05em;
+	font-size: 1.8vmax;
 }
-#dashboard {
-	padding: 15px;
+header .developer {
+	float: left;
 }
-#dashboard a {
+header .website {
+	float: right;
+}
+header .title {
+	transform: translateY(-.14em);
+	font-size: 14px;
+}
+.dashboard {
+	padding: 0 15px 15px;
+}
+.dashboard a {
 	text-decoration: none;
 }
+.email-section,
+.website-section {
+	margin-bottom: 2px;
+	font-size: 25px;
+}
+.go-to-links a,
+.project .go-arrow,
+.project .title h3 {
+	color: #000;
+}
+.go-to-links {
+	font-family: 'arial';
+	font-size: 14px;
+	margin-bottom: 15px;
+	text-decoration: underline;
+}
 .project {
-	box-shadow: 2px 1px 8px -4px#323232;
-	padding: 15px 15px 15px 8px;
-	margin: 0 auto 15px;
+	align-items: center;
 	border-radius: 5px;
+	box-shadow: 2px 1px 8px -4px#323232;
+	flex-direction: row;
+	margin: 0 auto 15px;
+	padding: 9px 15px 15px 8px;
 	width: 100%;
 }
 .project.ws,
@@ -79,41 +110,48 @@ header .right {
 .project.em:hover {
 	border-left: solid 5px rgb(41, 140, 215, 1);
 }
+.go-to-links a,
 .project.ws .go-arrow,
 .project.em .go-arrow {
 	transition: color .4s linear;
 }
-.project.ws:hover .go-arrow {
+.link-divider,
+.website-section,
+.project.ws:hover .go-arrow,
+.go-to-links:hover a.email-link {
 	color: rgb(121, 211, 253, 1);
 }
-.project.em:hover .go-arrow {
+.email-section,
+.go-to-links:hover a,
+.project.em:hover .go-arrow,
+.go-to-links:hover a.website-link {
 	color: rgb(41, 140, 215, 1);
+}
+.email-section,
+.website-section,
+.project .title h3 {
+	letter-spacing: .025em;
 }
 .project .title,
 .project .go-arrow {
 	font-family: 'Assistant';
 }
-.project .go-arrow,
-.project .title span {
-	color: #000;
-}
-.project .title span,
-.project .title small {
+.project .title h3,
+.project .title p {
 	display: block;
 }
 .project .title {
 	width: 70%;
 }
-.project .title span {
+.project .title h3 {
 	margin-bottom: 2px;
-	letter-spacing: .025em;
-	font-weight: 700;
 	font-size: 18px;
+	font-weight: 700;
 }
-.project .title small {
-	font-size: 15px;
-	font-weight: 500;
+.project .title p {
 	color: #727272;
+	font-weight: 500;
+	font-size: 15px;
 }
 .project .go-arrow {
 	font-weight: bolder;
@@ -123,25 +161,67 @@ header .right {
 .mobile-show {
 	display: none;
 }
+@media screen and (max-width: 765px) {
+	.project .title h3 {
+		font-size: 17px;
+	}
+	.email-section,
+	.website-section {
+		font-size: 22px;
+	}
+}
 @media screen and (max-width: 585px) {
 	header {
 		flex-direction: column;
 	}
-	header .left,
-	header .right {
+	header .developer-website {
 		text-align: center;
-		width: 100%;
 	}
-	header .left {
-		padding-top: 9px;
-		padding-bottom: 3px;
+	header .website,
+	header .developer {
+		display: block;
+		float: none;
 	}
-	header .right {
-		padding-top: 2px;
-		padding-bottom: 12px;
+	header .title,
+	header .website {
+		transform: none;
+	}
+	header .developer-website:first-child .website,
+	header .developer-website:first-child .developer {
+		transform: translateY(15%);
+	}
+	header .developer {
+		padding-bottom: 1px;
+		height: 28px;
+	}
+	header .website {
+		font-weight: 400;
+		font-size: 1.3em;
+		padding-bottom: 8px;
+	}
+	header .title {
+		font-size: 1.4em;
+		font-weight: bold;
+		padding-top: 8px;
+	}
+	.email-section,
+	.website-section {
+		font-size: 18px;
+	}
+	.project .title h3 {
+		font-size: 15px;
+	}
+	.project .title p {
+		font-size: 14px;
 	}
 	.mobile-show {
 		display: inline;
+	}
+	.mobile-hide {
+		display: none;
+	}
+	.mobile-show {
+		display: block;
 	}
 }
 @media screen and (max-width: 435px) {
