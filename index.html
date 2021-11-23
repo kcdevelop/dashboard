@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Work Sample Dashboard</title>
@@ -7,18 +7,44 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Assistant:wght@300;400;500&display=swap" rel="stylesheet">	
 		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/main.js" defer></script>
 	</head>
 	<body>
 	<header>
-		<div class="left">Work Sample Dashboard</div>
-		<div class="right">Front-End Development</div>
+		<div class="developer-website">
+			<span class="developer">Kenneth Corbin</span> 
+			<div  class="website">
+				<span class="mobile-hide">
+					Project Dashboard
+				</span>
+				<span class="mobile-show">
+					Front-End Developer
+				</span>
+			</div>
+		</div>
+		<div class="developer-website">
+			<div  class="title">
+				<span class="mobile-hide">
+					Front-End Developer
+				</span>
+				<span class="mobile-show">
+					Project Dashboard
+				</span>
+			</div>
+		</div>
 	</header>
-	<section id="dashboard">
+	<section class="dashboard">
+		<h2 id="website-section" class="website-section" >Websites</h2>
+		<nav class="go-to-links email-link">
+			<a href="#email-section">
+				Jump To Email Projects
+			</a>
+		</nav>
 		<a href="https://rebrand.ly/bainbridge-shady-grove-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>Bainbridge Shady Grove</span> 
-					<small>Project Type: Website |<br class="mobile-show" /> Micosite Site</small>
+					<h3>Bainbridge Shady Grove</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Micosite Site</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -26,8 +52,8 @@
 		<a href="https://rebrand.ly/eastside-bond-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>EastsideBond Shadyside Apartments</span> 
-					<small>Project Type: Website |<br class="mobile-show" /> Landing Page</small>
+					<h3>EastsideBond Shadyside Apartments</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Landing Page</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -35,8 +61,8 @@
 		<a href="https://rebrand.ly/halsteadmaldsq-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>Halstead Malden Square</span> 
-					<small>Project Type: Website |<br class="mobile-show" /> Single Page Site</small>
+					<h3>Halstead Malden Square</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Single Page Site</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -44,8 +70,8 @@
 		<a href="https://rebrand.ly/moaa-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>Military Officers<br class="mobile-show" /> Association of America</span> 
-					<small>Project Type: Website |<br class="mobile-show" />Landing Page</small>
+					<h3>Military Officers<br class="mobile-show" /> Association of America</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Landing Page</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -53,8 +79,8 @@
 		<a href="https://rebrand.ly/penn-stae-football-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>Penn State Football</span> 
-					<small>Project Type: Website |<br class="mobile-show" />Micro Site</small>
+					<h3>Penn State Football</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Micro Site</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -62,8 +88,8 @@
 		<a href="https://rebrand.ly/skylar-nyc-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>Skylar Residences</span> 
-					<small>Project Type: Website |<br class="mobile-show" /> Micro Site</small>
+					<h3>Skylar Residences</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Micro Site</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -71,17 +97,25 @@
 		<a href="https://rebrand.ly/stroud-group-ws" target="_blank">
 			<article class="project ws">
 				<div class="title">
-					<span>The Stroud Group</span> 
-					<small>Project Type: Website |<br class="mobile-show" /> Single Page Site</small>
+					<h3>The Stroud Group</h3> 
+					<p>Project Type: Website |<br class="mobile-show" /> Single Page Site</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
 		</a>
+	</section>
+	<section class="dashboard">
+		<h2 id="email-section" class="email-section" >HTML Emails</h2>
+		<nav class="go-to-links website-link">
+			<a href="#website-section">
+				Back To Website Projects
+			</a>
+		</nav>
 		<a href="https://rebrand.ly/halstead-em" target="_blank">
 			<article class="project em">
 				<div class="title">
-					<span>Halstead Station,<br class="mobile-show" /> New Rochelle</span> 
-					<small>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</small>
+					<h3>Halstead Station,<br class="mobile-show" /> New Rochelle</h3> 
+					<p>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -89,8 +123,8 @@
 		<a href="https://rebrand.ly/hilton-supply-em" target="_blank">
 			<article class="project em">
 				<div class="title">
-					<span>Hilton Supply Management</span> 
-					<small>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</small>
+					<h3>Hilton Supply Management</h3> 
+					<p>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -98,8 +132,8 @@
 		<a href="https://rebrand.ly/vw-accessories-em" target="_blank">
 			<article class="project em">
 				<div class="title">
-					<span>Volkswagen Accessories (THULE)</span> 
-					<small>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</small>
+					<h3>Volkswagen Accessories (THULE)</h3> 
+					<p>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
@@ -107,8 +141,8 @@
 		<a href="https://rebrand.ly/vw-tech-care-em" target="_blank">
 			<article class="project em">
 				<div class="title">
-					<span>Volkswagen Tech Care</span> 
-					<small>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</small>
+					<h3>Volkswagen Tech Care</h3> 
+					<p>Project Type: HTML Email |<br class="mobile-show" /> Mobile Responsive</p>
 				</div>
 				<div class="go-arrow">&rang;</div>
 			</article>
