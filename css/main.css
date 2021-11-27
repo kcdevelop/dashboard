@@ -8,8 +8,13 @@ input, select, textarea, span {
 	padding: 0;
 }
 article,
-header {
+header,
+.contact-bar {
 	display: flex;
+}
+.project,
+.contact-bar {
+	flex-direction: row;
 }
 header,
 .project,
@@ -33,6 +38,7 @@ header .developer-website {
 header {
 	flex-direction: column;
 	padding: 8px 15px 18px;
+	margin-bottom: 20px;
 }
 header .developer-website:first-child .website,
 header .developer-website:first-child .developer {
@@ -52,6 +58,7 @@ header .developer {
 header .developer-website {
 	letter-spacing: .05em;
 	font-size: 1.8vmax;
+	position: relative;
 }
 header .developer {
 	float: left;
@@ -59,9 +66,35 @@ header .developer {
 header .website {
 	float: right;
 }
+header .title,
+.contact-bar {
+	position: absolute;
+}
 header .title {
-	transform: translateY(-.14em);
-	font-size: 14px;
+	font-size: 18px;
+	left: 0px;
+}
+.contact-bar {
+	margin-top: 4px;
+	right: 0px;
+}
+.contact-resume {
+	padding-right: 12px;
+}
+.contact-resume a img {
+	height: 30px;
+	width: 24px;
+}
+.contact-phone {
+	padding-right: 8px;
+}
+.contact-phone a img {
+	height: 30px;
+	width: 30px;
+}
+.contact-email a img {
+	height: 30px;
+	width: 41px;
 }
 .dashboard {
 	padding: 0 15px 15px;
@@ -89,7 +122,6 @@ header .title {
 	align-items: center;
 	border-radius: 5px;
 	box-shadow: 2px 1px 8px -4px#323232;
-	flex-direction: row;
 	margin: 0 auto 15px;
 	padding: 9px 15px 15px 8px;
 	width: 100%;
@@ -162,17 +194,34 @@ header .title {
 	display: none;
 }
 @media screen and (max-width: 765px) {
-	.project .title h3 {
+	.project .title h3,
+	.header .title {
 		font-size: 17px;
 	}
 	.email-section,
 	.website-section {
 		font-size: 22px;
 	}
+	.contact-resume a img,
+	.contact-phone a img,
+	.contact-email a img {
+		height: 25px;
+	}
+	.contact-resume a img {
+		width: 20px;
+	}
+	.contact-phone a img {
+		width: 25px;
+	}
+	.contact-email a img {
+		width: 37px;
+	}
 }
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 695px) {
 	header {
 		flex-direction: column;
+		margin-bottom: 4px;
+		padding-bottom: 5px;
 	}
 	header .developer-website {
 		text-align: center;
@@ -200,9 +249,35 @@ header .title {
 		padding-bottom: 8px;
 	}
 	header .title {
-		font-size: 1.4em;
+		font-size: 25px;
 		font-weight: bold;
 		padding-top: 8px;
+	}
+	header .title,
+	.contact-bar {
+		position: static;
+	}
+	header .title {
+		left: auto;
+	}
+	.contact-bar {
+		justify-content: center;
+		margin-top: 8px;
+		right: auto;
+	}
+	.contact-resume a img,
+	.contact-phone a img,
+	.contact-email a img {
+		height: 25px;
+	}
+	.contact-resume a img {
+		width: 19px;
+	}
+	.contact-phone a img {
+		width: 25px;
+	}
+	.contact-email a img {
+		width: 37px;
 	}
 	.email-section,
 	.website-section {
