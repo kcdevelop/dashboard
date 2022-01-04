@@ -29,6 +29,8 @@ header .developer-website {
 }
 .email-section,
 .website-section,
+.wordpress-section,
+.javascript-section,
 header .developer-website {
 	font-family: 'Orbitron';
 }
@@ -71,7 +73,7 @@ header .title,
 	position: absolute;
 }
 header .title {
-	font-size: 18px;
+	font-size: 24px;
 	left: 0px;
 }
 .contact-bar {
@@ -103,7 +105,9 @@ header .title {
 	text-decoration: none;
 }
 .email-section,
-.website-section {
+.website-section,
+.wordpress-section,
+.javascript-section {
 	margin-bottom: 2px;
 	font-size: 25px;
 }
@@ -133,14 +137,26 @@ header .title {
 .project.ws {
 	border-left: solid 5px rgba(140, 215, 249, .55);
 }
-.project.em {
+.project.js {
+	border-left: solid 5px rgb(121, 173, 243, .55);
+}
+.project.wp {
 	border-left: solid 5px rgba(41, 140, 215, .55);
 }
+.project.em {
+	border-left: solid 5px rgb(39, 196, 203, .55);
+}
 .project.ws:hover {
-	border-left: solid 5px rgb(121, 211, 253, 1);
+	border-left: solid 5px rgba(140, 215, 249, 1);
+}
+.project.js:hover {
+	border-left: solid 5px rgb(121, 173, 243, 1);
+}
+.project.wp:hover {
+	border-left: solid 5px rgba(41, 140, 215, 1);
 }
 .project.em:hover {
-	border-left: solid 5px rgb(41, 140, 215, 1);
+	border-left: solid 5px rgb(39, 196, 203, 1);
 }
 .go-to-links a,
 .project.ws .go-arrow,
@@ -151,13 +167,22 @@ header .title {
 .website-section,
 .project.ws:hover .go-arrow,
 .go-to-links:hover a.email-link {
-	color: rgb(121, 211, 253, 1);
+	color: rgba(140, 215, 249, 1);
+}
+.javascript-section,
+.project.js:hover .go-arrow,
+.go-to-links:hover a.javascript-link {
+	color: rgb(121, 173, 243, 1);
+}
+.wordpress-section,
+.project.wp:hover .go-arrow,
+.go-to-links:hover a.wordpress-link {
+	color: rgba(41, 140, 215, 1);
 }
 .email-section,
-.go-to-links:hover a,
 .project.em:hover .go-arrow,
 .go-to-links:hover a.website-link {
-	color: rgb(41, 140, 215, 1);
+	color: rgb(39, 169, 197, 1);
 }
 .email-section,
 .website-section,
@@ -199,7 +224,9 @@ header .title {
 		font-size: 17px;
 	}
 	.email-section,
-	.website-section {
+	.website-section,
+	.wordpress-section,
+	.javascript-section {
 		font-size: 22px;
 	}
 	.contact-resume a img,
@@ -280,7 +307,9 @@ header .title {
 		width: 37px;
 	}
 	.email-section,
-	.website-section {
+	.website-section,
+	.wordpress-section,
+	.javascript-section {
 		font-size: 18px;
 	}
 	.project .title h3 {
