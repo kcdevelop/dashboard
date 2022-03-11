@@ -218,6 +218,21 @@ header .title {
 .mobile-show {
 	display: none;
 }
+.new-banner {
+	position: relative;
+	overflow: hidden;
+}
+.new-banner::after {
+	background: url('../images/new-banner-blue-level.png') no-repeat 0px 0px transparent;
+	background-size: contain;
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 52px;
+	height: 30px;
+	right: 70px;
+    top: -1px;
+}
 @media screen and (max-width: 765px) {
 	.project .title h3,
 	.header .title {
@@ -331,5 +346,9 @@ header .title {
 @media screen and (max-width: 435px) {
 	.mobile-show {
 		display: inline;
+	}
+	.new-banner::after {
+		width: 47px;
+		height: 25px;
 	}
 }
